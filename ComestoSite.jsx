@@ -808,7 +808,7 @@ function Prezzi() {
           </p>
           <p className="t-small c-grigio">all'anno, cioè {PREZZO_ANNO_AL_MESE} al mese</p>
           <p className="t-body c-grigio pt-4">
-            Due mesi in regalo rispetto al mensile. Fattura unica, la scarichi e la passi al commercialista una volta sola.
+            Due mesi e mezzo in regalo: 187,99 invece di 239,88. Fattura unica, la scarichi e la passi al commercialista una volta sola.
           </p>
           <div className="pt-6">
             <Bottone href="#attiva" variante="chiaro" largo>Attiva la prova gratuita</Bottone>
