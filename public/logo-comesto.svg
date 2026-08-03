@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 64" width="232" height="64" role="img" aria-label="comesto">
+  <defs>
+    <clipPath id="arcoLogo">
+      <path d="M13 31a19 19 0 0 1 38 0v17a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="#17181A"/>
+  <g clip-path="url(#arcoLogo)">
+    <rect x="13" y="12" width="19" height="41" fill="#FFFFFF"/>
+    <rect x="32" y="12" width="19" height="41" fill="#FFD9A0"/>
+  </g>
+  <circle cx="32" cy="8" r="2.6" fill="#FFD9A0"/>
+
+  <text x="80" y="42"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="600" letter-spacing="-1.1" fill="#17181A">comesto</text>
+  <circle cx="212" cy="39" r="4" fill="#D8453B"/>
+</svg>
