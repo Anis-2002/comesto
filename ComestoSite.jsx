@@ -823,7 +823,7 @@ function Prezzi() {
             <li>Tagli nel menu: <Ph>numero tagli</Ph></li>
             <li>Logo, colori e menu personalizzati</li>
             <li>Link e QR pronti da stampare</li>
-            <li>Assistenza WhatsApp <Ph>orari assistenza</Ph></li>
+            <li>Assistenza diretta su WhatsApp</li>
           </ul>
         </div>
         <div>
@@ -1021,7 +1021,6 @@ function Footer() {
           <p className="t-occhiello c-inchiostro pb-2">Contatti</p>
           <p><a className="link-sottile" href={WA_LINK} target="_blank" rel="noreferrer">WhatsApp +39 371 424 0981</a></p>
           <p><a className="link-sottile" href="mailto:info@comesto.me">info@comesto.me</a></p>
-          <p>Assistenza <Ph>orari assistenza</Ph></p>
           {/* Dati societari e partita IVA vanno qui prima del primo incasso:
               sono obbligatori per legge su un sito che vende abbonamenti. */}
           <p className="pt-3"><Ph>dati societari da inserire prima di vendere</Ph></p>
