@@ -45,11 +45,11 @@
     <text x="80" y="490">prima di sedersi sulla poltrona.</text>
   </g>
 
-  <rect x="80" y="533" width="238" height="46" rx="23" fill="#17181A" />
-  <text x="199" y="562" text-anchor="middle"
+  <rect x="80" y="533" width="286" height="46" rx="23" fill="#17181A" />
+  <text x="223" y="562" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-        font-size="19" font-weight="500" fill="#FFFFFF">Primo mese gratis</text>
-  <text x="340" y="562"
+        font-size="19" font-weight="500" fill="#FFFFFF">Prima settimana gratis</text>
+  <text x="388" y="562"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
         font-size="19" fill="#6E7176">comesto.me</text>
 

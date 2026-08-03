@@ -19,18 +19,18 @@ import React, { useState, useEffect, useRef, useCallback, useId } from "react";
    vuota. L'immagine og deve essere un URL assoluto e reale (1200x630).
 
    <title>comesto - il taglio lo vede prima, poi entra</title>
-   <meta name="description" content="Il tuo cliente si fa un selfie, sceglie dal tuo menu tagli e si vede col taglio addosso. Tu ricevi un link e un QR. 19,99 euro al mese, primo mese gratis." />
+   <meta name="description" content="Il tuo cliente si fa un selfie, sceglie dal tuo menu tagli e si vede col taglio addosso. Tu ricevi un link e un QR. 19,99 euro al mese, prima settimana gratis." />
    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
    <meta name="theme-color" content="#FFFFFF" />
-   <link rel="canonical" href="https://<< dominio da inserire >>/" />
+   <link rel="canonical" href="https://comesto.me/" />
 
    <meta property="og:type" content="website" />
    <meta property="og:site_name" content="comesto" />
    <meta property="og:locale" content="it_IT" />
-   <meta property="og:url" content="https://<< dominio da inserire >>/" />
+   <meta property="og:url" content="https://comesto.me/" />
    <meta property="og:title" content="Corto ai lati vuol dire dieci cose diverse" />
-   <meta property="og:description" content="Il cliente si vede col taglio addosso prima di sedersi. Tu metti un QR sullo specchio. Primo mese gratis, disdici quando vuoi." />
-   <meta property="og:image" content="https://<< dominio da inserire >>/og-comesto.jpg" />
+   <meta property="og:description" content="Il cliente si vede col taglio addosso prima di sedersi. Tu metti un QR sullo specchio. Prima settimana gratis, disdici quando vuoi." />
+   <meta property="og:image" content="https://comesto.me/og-comesto.jpg" />
    <meta property="og:image:width" content="1200" />
    <meta property="og:image:height" content="630" />
    <meta property="og:image:alt" content="Uno specchio da barbiere con lo stesso cliente prima e dopo il taglio" />
@@ -38,7 +38,7 @@ import React, { useState, useEffect, useRef, useCallback, useId } from "react";
    <meta name="twitter:card" content="summary_large_image" />
    <meta name="twitter:title" content="Corto ai lati vuol dire dieci cose diverse" />
    <meta name="twitter:description" content="Il cliente si vede col taglio addosso prima di sedersi." />
-   <meta name="twitter:image" content="https://<< dominio da inserire >>/og-comesto.jpg" />
+   <meta name="twitter:image" content="https://comesto.me/og-comesto.jpg" />
    =========================================================================== */
 
 /* ---------------------------------------------------------------- costanti */
@@ -520,7 +520,7 @@ function Hero() {
               <Bottone href="#demo" variante="chiaro">Provala adesso</Bottone>
             </div>
             <p className="t-micro c-grigio pt-5">
-              Primo mese gratis. Nessun costo di attivazione. Disdici quando vuoi.
+              Prima settimana gratis. Nessun costo di attivazione. Disdici quando vuoi.
             </p>
           </div>
 
@@ -794,7 +794,7 @@ function Prezzi() {
           </p>
           <p className="t-small c-grigio">al mese, IVA esclusa</p>
           <p className="t-body c-grigio pt-4">
-            Primo mese gratis. Poi decidi tu se continuare, senza dover avvisare nessuno con tre mesi di anticipo.
+            Prima settimana gratis. Poi decidi tu se continuare, senza dover avvisare nessuno con tre mesi di anticipo.
           </p>
           <div className="pt-6">
             <Bottone href="#attiva" variante="scuro" largo>Attiva la prova gratuita</Bottone>
@@ -852,7 +852,7 @@ function Domande() {
     },
     {
       q: "E se poi non lo usa nessuno",
-      a: "Il primo mese è gratis apposta per scoprirlo senza rischiare soldi. Se dopo trenta giorni non ti ha portato niente, disdici e non paghi. Nessun vincolo, nessuna penale."
+      a: "La prima settimana è gratis apposta per scoprirlo senza rischiare soldi. Sette giorni bastano: ci passa dentro un fine settimana, che è quando lavori di più. Se non ti ha portato niente, disdici e non paghi."
     },
     {
       q: "I miei clienti sono grandi, non lo useranno mai",
@@ -909,26 +909,19 @@ function Domande() {
 function ChiSiamo() {
   return (
     <Sezione id="chisiamo">
-      <div className="sm:flex sm:gap-10 sm:items-start">
-        <div className="foto-fondatore rounded-2xl bg-nebbia border b-linea flex items-center justify-center text-center p-3 mb-8 sm:mb-0">
-          <span className="t-micro c-grigio">
-            <Ph>foto del fondatore</Ph>
-          </span>
-        </div>
-        <div className="min-w-0">
-          <Occhiello>Chi c'è dietro</Occhiello>
-          <h2 className="t-h2">Sono <Ph>nome fondatore</Ph></h2>
-          <p className="t-body c-grigio pt-4 max-w-2xl">
-            Ho fatto comesto dopo aver sentito la stessa scena decine di volte da questa parte della sedia: uno che spiega il taglio con le mani e un barbiere che tira a indovinare. Il problema non era la bravura di nessuno dei due, era che stavano parlando di due cose diverse.
-          </p>
-          <p className="t-body c-grigio pt-4 max-w-2xl">
-            Se qualcosa non va rispondo io, sullo stesso numero WhatsApp che vedi qui sotto. Non c'è un call center in mezzo.
-          </p>
-          <div className="pt-6">
-            <Bottone href={WA_LINK} variante="chiaro">
-              <IconaWA /> Scrivimi su WhatsApp
-            </Bottone>
-          </div>
+      <div className="max-w-2xl">
+        <Occhiello>Chi c'è dietro</Occhiello>
+        <h2 className="t-h2">Una persona sola, e il suo numero di telefono</h2>
+        <p className="t-body c-grigio pt-5">
+          comesto è nato da una scena sentita decine di volte da questa parte della sedia: uno che spiega il taglio con le mani e un barbiere che tira a indovinare. Il problema non era la bravura di nessuno dei due, era che stavano parlando di due cose diverse.
+        </p>
+        <p className="t-body c-grigio pt-4">
+          Non c'è un'agenzia, non c'è un call center, non c'è un modulo di assistenza che ti risponde fra tre giorni. Scrivi al numero qui sotto e ti risponde chi il prodotto lo ha fatto. Se una cosa non va, la sistemo io.
+        </p>
+        <div className="pt-6">
+          <Bottone href={WA_LINK} variante="chiaro">
+            <IconaWA /> Scrivimi su WhatsApp
+          </Bottone>
         </div>
       </div>
     </Sezione>
@@ -977,7 +970,7 @@ function Attiva() {
     <Sezione id="attiva">
       <div className="max-w-xl mx-auto">
         <Occhiello>Ultimo passo</Occhiello>
-        <h2 className="t-h2">Primo mese gratis. Poi vedi tu.</h2>
+        <h2 className="t-h2">Prima settimana gratis. Poi vedi tu.</h2>
         <p className="t-lead c-grigio pt-4">
           Lasciami quattro righe e ti richiamo io. Se preferisci scrivere, il pulsante di WhatsApp va bene uguale.
         </p>
@@ -1048,13 +1041,13 @@ function Footer() {
         </div>
 
         <div className="t-small c-grigio space-y-1">
-          <p className="t-occhiello c-inchiostro pb-2">Azienda</p>
-          <p><Ph>ragione sociale</Ph></p>
-          <p>Partita IVA <Ph>partita IVA</Ph></p>
-          <p><Ph>indirizzo sede</Ph></p>
-          <p><a className="link-sottile" href="mailto:info@comesto.it">info@<Ph>dominio</Ph></a></p>
+          <p className="t-occhiello c-inchiostro pb-2">Contatti</p>
           <p><a className="link-sottile" href={WA_LINK} target="_blank" rel="noreferrer">WhatsApp +39 371 424 0981</a></p>
+          <p><a className="link-sottile" href="mailto:info@comesto.me">info@comesto.me</a></p>
           <p>Assistenza <Ph>orari assistenza</Ph></p>
+          {/* Dati societari e partita IVA vanno qui prima del primo incasso:
+              sono obbligatori per legge su un sito che vende abbonamenti. */}
+          <p className="pt-3"><Ph>dati societari da inserire prima di vendere</Ph></p>
         </div>
 
         <div className="t-small c-grigio space-y-1">
@@ -1117,7 +1110,7 @@ const LEGALI = {
     titolo: "Termini e condizioni",
     blocchi: [
       ["Oggetto", "‹‹ ragione sociale ›› fornisce in abbonamento un'applicazione web che consente ai clienti di una barberia di visualizzare un'anteprima indicativa di un taglio di capelli su una propria fotografia."],
-      ["Prezzi e fatturazione", "L'abbonamento costa " + PREZZO_MESE + " euro al mese oppure " + PREZZO_ANNO + " euro all'anno, IVA esclusa. Il primo mese è gratuito. Su ogni pagamento viene emessa fattura elettronica. Nessun costo di attivazione."],
+      ["Prezzi e fatturazione", "L'abbonamento costa " + PREZZO_MESE + " euro al mese oppure " + PREZZO_ANNO + " euro all'anno, IVA esclusa. La prima settimana è gratuita. Su ogni pagamento viene emessa fattura elettronica. Nessun costo di attivazione."],
       ["Durata e disdetta", "L'abbonamento si rinnova automaticamente alla scadenza. Puoi disdire in qualsiasi momento con effetto dalla scadenza del periodo già pagato, senza penali e senza preavviso minimo. Scrivi a ‹‹ email assistenza ›› o sul numero WhatsApp indicato."],
       ["Natura del risultato", "L'anteprima generata è uno strumento di consulenza a scopo indicativo. Non costituisce garanzia del risultato finale del servizio di taglio, che dipende dall'esecuzione del professionista e dalle caratteristiche della persona."],
       ["Obblighi del cliente", "Il titolare della barberia si impegna a informare i propri clienti sull'uso dell'applicazione, a raccogliere il consenso al caricamento della fotografia e a non caricare immagini di terzi senza autorizzazione."],
