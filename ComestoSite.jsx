@@ -48,9 +48,9 @@ const WA_TESTO =
   "Ciao, ho visto comesto e vorrei attivare la prova gratuita per la mia barberia.";
 const WA_LINK = "https://wa.me/" + WA_NUMERO + "?text=" + encodeURIComponent(WA_TESTO);
 
-// Quando demo.comesto.me e attivo, sostituire con "https://demo.comesto.me/demo":
-// l'indirizzo onrender.com funziona ma rivela l'hosting a chi guarda la barra.
-const DEMO_URL = "https://comesto-demo.onrender.com/demo";
+// "demo" e lo slug della barberia dimostrativa nel database: cambiando slug
+// va aggiornato anche qui, altrimenti il pulsante porta a una pagina vuota.
+const DEMO_URL = "https://demo.comesto.me/demo";
 const DEMO_E_LOCALE = false;
 
 const PREZZO_MESE = "19,99";
