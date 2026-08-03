@@ -182,7 +182,6 @@ body{
 /* misure fuori dalla scala core di Tailwind */
 .specchio-basso{ height:286px; }
 .specchio-alto{ height:380px; }
-.foto-fondatore{ width:156px; height:156px; flex:0 0 156px; }
 @media (min-width:640px){
   .specchio-basso{ height:380px; }
   .specchio-alto{ height:500px; }
@@ -906,28 +905,6 @@ function Domande() {
   );
 }
 
-function ChiSiamo() {
-  return (
-    <Sezione id="chisiamo">
-      <div className="max-w-2xl">
-        <Occhiello>Chi c'è dietro</Occhiello>
-        <h2 className="t-h2">Una persona sola, e il suo numero di telefono</h2>
-        <p className="t-body c-grigio pt-5">
-          comesto è nato da una scena sentita decine di volte da questa parte della sedia: uno che spiega il taglio con le mani e un barbiere che tira a indovinare. Il problema non era la bravura di nessuno dei due, era che stavano parlando di due cose diverse.
-        </p>
-        <p className="t-body c-grigio pt-4">
-          Non c'è un'agenzia, non c'è un call center, non c'è un modulo di assistenza che ti risponde fra tre giorni. Scrivi al numero qui sotto e ti risponde chi il prodotto lo ha fatto. Se una cosa non va, la sistemo io.
-        </p>
-        <div className="pt-6">
-          <Bottone href={WA_LINK} variante="chiaro">
-            <IconaWA /> Scrivimi su WhatsApp
-          </Bottone>
-        </div>
-      </div>
-    </Sezione>
-  );
-}
-
 function Attiva() {
   const [dati, setDati] = useState({ nome: "", barberia: "", citta: "", telefono: "" });
   const [errore, setErrore] = useState("");
@@ -1188,7 +1165,6 @@ export default function App() {
         <Founding />
         <Prezzi />
         <Domande />
-        <ChiSiamo />
         <Attiva />
       </main>
       <Footer />
