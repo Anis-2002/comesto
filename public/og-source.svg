@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <clipPath id="ogArcoMarchio">
+      <path d="M13 31a19 19 0 0 1 38 0v17a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" />
+    </clipPath>
+    <clipPath id="ogSpecchio">
+      <path d="M700 335a210 210 0 0 1 420 0v195a26 26 0 0 1-26 26H726a26 26 0 0 1-26-26z" />
+    </clipPath>
+    <clipPath id="ogSinistra">
+      <rect x="690" y="110" width="220" height="460" />
+    </clipPath>
+    <clipPath id="ogTesta">
+      <ellipse cx="160" cy="212" rx="76" ry="92" />
+    </clipPath>
+    <linearGradient id="ogFondoSpecchio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F7" />
+      <stop offset="100%" stop-color="#E4E2DD" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FFFFFF" />
+
+  <g transform="translate(80,64) scale(0.78)">
+    <rect width="64" height="64" rx="14" fill="#17181A" />
+    <g clip-path="url(#ogArcoMarchio)">
+      <rect x="13" y="12" width="19" height="41" fill="#FFFFFF" />
+      <rect x="32" y="12" width="19" height="41" fill="#FFD9A0" />
+    </g>
+    <circle cx="32" cy="8" r="2.6" fill="#FFD9A0" />
+  </g>
+  <text x="140" y="103" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="600" letter-spacing="-0.9" fill="#17181A">comesto</text>
+  <circle cx="256" cy="98" r="4" fill="#D8453B" />
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+     font-size="66" font-weight="600" letter-spacing="-2.4" fill="#17181A">
+    <text x="80" y="255">Corto ai lati</text>
+    <text x="80" y="325">vuol dire dieci</text>
+    <text x="80" y="395">cose diverse</text>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+     font-size="25" fill="#6E7176">
+    <text x="80" y="455">Il cliente si vede col taglio addosso</text>
+    <text x="80" y="490">prima di sedersi sulla poltrona.</text>
+  </g>
+
+  <rect x="80" y="533" width="238" height="46" rx="23" fill="#17181A" />
+  <text x="199" y="562" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="19" font-weight="500" fill="#FFFFFF">Primo mese gratis</text>
+  <text x="340" y="562"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="19" fill="#6E7176">comesto.me</text>
+
+  <g fill="#FFD9A0">
+    <circle cx="836" cy="96" r="8" />
+    <circle cx="878" cy="96" r="8" />
+    <circle cx="920" cy="96" r="8" />
+    <circle cx="962" cy="96" r="8" />
+    <circle cx="1004" cy="96" r="8" />
+  </g>
+
+  <g clip-path="url(#ogSpecchio)">
+    <rect x="690" y="110" width="440" height="460" fill="url(#ogFondoSpecchio)" />
+    <ellipse cx="910" cy="115" rx="290" ry="150" fill="#FFD9A0" opacity=".24" />
+
+    <!-- COME ARRIVA: capelli e barba lunghi -->
+    <g transform="translate(650,128)">
+      <ellipse cx="160" cy="212" rx="76" ry="92" fill="#DCB99B" />
+      <ellipse cx="84" cy="216" rx="11" ry="17" fill="#D0AA8B" />
+      <ellipse cx="236" cy="216" rx="11" ry="17" fill="#D0AA8B" />
+      <g fill="#3A2E26">
+        <ellipse cx="132" cy="202" rx="6" ry="7" />
+        <ellipse cx="188" cy="202" rx="6" ry="7" />
+      </g>
+      <g stroke="#2E2721" stroke-width="5" stroke-linecap="round">
+        <path d="M119 186h26" />
+        <path d="M175 186h26" />
+      </g>
+      <path d="M160 210v20c0 5-4 8-9 9" stroke="#B48A66" stroke-width="4" fill="none" stroke-linecap="round" />
+      <g clip-path="url(#ogTesta)">
+        <path d="M84 196C96 242 126 252 160 252s64-10 76-56v134H84z" fill="#332A22" />
+      </g>
+      <path d="M110 278c10 74 32 100 50 100s40-26 50-100z" fill="#332A22" />
+      <path d="M148 270h24" stroke="#7A5140" stroke-width="4" stroke-linecap="round" />
+      <path d="M70 220C62 132 100 92 160 92s98 40 90 128c-4-34-10-54-24-64-14 20-36 28-66 24-26-4-44-14-52-28-10 20-24 34-38 44z" fill="#2E2721" />
+      <path d="M74 200c-12 34-10 66 2 90-4-36-2-62 8-90z" fill="#2E2721" />
+      <path d="M246 200c12 34 10 66-2 90 4-36 2-62-8-90z" fill="#2E2721" />
+    </g>
+
+    <!-- COME ESCE: taglio corto, barba curata -->
+    <g transform="translate(850,128)">
+      <ellipse cx="160" cy="212" rx="76" ry="92" fill="#DCB99B" />
+      <ellipse cx="84" cy="216" rx="11" ry="17" fill="#D0AA8B" />
+      <ellipse cx="236" cy="216" rx="11" ry="17" fill="#D0AA8B" />
+      <g fill="#3A2E26">
+        <ellipse cx="132" cy="202" rx="6" ry="7" />
+        <ellipse cx="188" cy="202" rx="6" ry="7" />
+      </g>
+      <g stroke="#2E2721" stroke-width="5" stroke-linecap="round">
+        <path d="M120 184h24" />
+        <path d="M176 184h24" />
+      </g>
+      <path d="M160 210v20c0 5-4 8-9 9" stroke="#B48A66" stroke-width="4" fill="none" stroke-linecap="round" />
+      <g clip-path="url(#ogTesta)">
+        <path d="M84 212C96 250 126 260 160 260s64-10 76-48v118H84z" fill="#2C241F" />
+      </g>
+      <path d="M148 276h24" stroke="#7A5140" stroke-width="4" stroke-linecap="round" />
+      <path d="M84 178C88 118 118 96 160 96s72 22 76 82c-18-22-44-32-76-32s-58 10-76 32z" fill="#26201C" />
+    </g>
+
+    <path d="M910 200v300" stroke="#17181A" stroke-width="1.5" opacity=".12" />
+  </g>
+
+  <path d="M700 335a210 210 0 0 1 420 0v195a26 26 0 0 1-26 26H726a26 26 0 0 1-26-26z"
+        fill="none" stroke="#DDDBD6" stroke-width="10" />
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16">
+    <rect x="751" y="512" width="118" height="34" rx="11" fill="#FFFFFF" opacity=".94" />
+    <text x="810" y="534" text-anchor="middle" fill="#6E7176">Come arriva</text>
+    <rect x="954" y="512" width="112" height="34" rx="11" fill="#17181A" />
+    <text x="1010" y="534" text-anchor="middle" fill="#FFFFFF">Come esce</text>
+  </g>
+</svg>

@@ -225,16 +225,24 @@ function Stili() {
 
 function Ritratto({ variante }) {
   const dopo = variante === "dopo";
+  const uid = useId().replace(/:/g, "");
+  const idSfondo = "sfondo" + uid;
+  const idTesta = "testa" + uid;
   return (
     <svg viewBox="0 0 320 420" className="w-full h-full block" role="img"
-      aria-label={dopo ? "Illustrazione: stesso viso con taglio sfumato e barba definita" : "Illustrazione: viso con capelli lunghi e disordinati"}>
+      aria-label={dopo ? "Illustrazione: stesso viso con taglio sfumato e barba curata" : "Illustrazione: viso con capelli lunghi e disordinati"}>
       <defs>
-        <linearGradient id={dopo ? "sfondoB" : "sfondoA"} x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={idSfondo} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={dopo ? "#FAF9F7" : "#F1EFEB"} />
           <stop offset="100%" stopColor={dopo ? "#E8E6E1" : "#DFDCD6"} />
         </linearGradient>
+        {/* la barba viene ritagliata sulla testa: cosi resta una massa piena
+            che segue la mascella, invece di una mezzaluna che sembra un sorriso */}
+        <clipPath id={idTesta}>
+          <ellipse cx="160" cy="212" rx="76" ry="92" />
+        </clipPath>
       </defs>
-      <rect width="320" height="420" fill={"url(#" + (dopo ? "sfondoB" : "sfondoA") + ")"} />
+      <rect width="320" height="420" fill={"url(#" + idSfondo + ")"} />
 
       {/* spalle */}
       <path d="M42 420c6-58 44-92 118-92s112 34 118 92z" fill={dopo ? "#2A2D33" : "#3A3D43"} />
@@ -245,29 +253,43 @@ function Ritratto({ variante }) {
       <ellipse cx="84" cy="216" rx="11" ry="17" fill="#D0AA8B" />
       <ellipse cx="236" cy="216" rx="11" ry="17" fill="#D0AA8B" />
 
-      {/* occhi e naso */}
+      {/* occhi, sopracciglia, naso */}
       <g fill="#3A2E26">
-        <ellipse cx="132" cy="204" rx="6.5" ry="7.5" />
-        <ellipse cx="188" cy="204" rx="6.5" ry="7.5" />
+        <ellipse cx="132" cy="202" rx="6" ry="7" />
+        <ellipse cx="188" cy="202" rx="6" ry="7" />
       </g>
-      <path d="M160 214v22c0 5-4 8-9 9" stroke="#B48A66" strokeWidth="4" fill="none" strokeLinecap="round" />
+      <g stroke="#2E2721" strokeWidth="5" strokeLinecap="round">
+        <path d={dopo ? "M120 184h24" : "M119 186h26"} />
+        <path d={dopo ? "M176 184h24" : "M175 186h26"} />
+      </g>
+      <path d="M160 210v20c0 5-4 8-9 9" stroke="#B48A66" strokeWidth="4" fill="none" strokeLinecap="round" />
 
       {dopo ? (
         <g>
-          <path d="M84 176c2-52 34-80 76-80s74 28 76 80c-14-20-40-30-76-30s-62 10-76 30z" fill="#26201C" />
-          <path d="M84 176c14-20 40-30 76-30s62 10 76 30" stroke="#8B929B" strokeWidth="2" fill="none" opacity=".55" />
-          <path d="M86 190c8-8 20-12 30-12" stroke="#26201C" strokeWidth="7" fill="none" strokeLinecap="round" opacity=".5" />
-          <path d="M234 190c-8-8-20-12-30-12" stroke="#26201C" strokeWidth="7" fill="none" strokeLinecap="round" opacity=".5" />
-          <path d="M104 236c6 46 30 70 56 70s50-24 56-70c-12 26-32 38-56 38s-44-12-56-38z" fill="#2C241F" />
-          <path d="M146 272h28" stroke="#B4826A" strokeWidth="5" strokeLinecap="round" />
+          {/* barba corta: massa piena col bordo superiore curvo, mai una
+              mezzaluna sottile (a distanza sembrerebbe una bocca sorridente) */}
+          <g clipPath={"url(#" + idTesta + ")"}>
+            <path d="M84 212C96 250 126 260 160 260s64-10 76-48v118H84z" fill="#2C241F" />
+          </g>
+          <path d="M148 276h24" stroke="#7A5140" strokeWidth="4" strokeLinecap="round" />
+          {/* taglio corto: calotta che si ferma sopra le orecchie */}
+          <path d="M84 178C88 118 118 96 160 96s72 22 76 82c-18-22-44-32-76-32s-58 10-76 32z" fill="#26201C" />
         </g>
       ) : (
         <g>
-          <path d="M72 214c-6-74 30-116 88-116s94 42 88 116c-4-30-6-50-18-62-10 16-30 20-52 16-20-4-34-14-40-26-10 20-24 34-44 38-14 3-20 14-22 34z" fill="#2E2721" />
-          <path d="M74 206c-10 26-8 52 2 70-2-30 0-52 8-70z" fill="#2E2721" />
-          <path d="M246 206c10 26 8 52-2 70 2-30 0-52-8-70z" fill="#2E2721" />
-          <path d="M96 132c22 10 40 14 64 12" stroke="#413830" strokeWidth="4" fill="none" opacity=".8" />
-          <path d="M96 232c4 60 32 88 64 88s60-28 64-88c-14 34-36 50-64 50s-50-16-64-50z" fill="#362C22" />
+          {/* barba lunga: stessa massa, ma piu alta sulle guance e prolungata
+              sotto il mento con una punta arrotondata */}
+          <g clipPath={"url(#" + idTesta + ")"}>
+            <path d="M84 196C96 242 126 252 160 252s64-10 76-56v134H84z" fill="#332A22" />
+          </g>
+          {/* la punta parte da dove la testa e larga uguale, altrimenti sui
+              lati resta uno scalino di sfondo */}
+          <path d="M110 278c10 74 32 100 50 100s40-26 50-100z" fill="#332A22" />
+          <path d="M148 270h24" stroke="#7A5140" strokeWidth="4" strokeLinecap="round" />
+          {/* capelli lunghi che coprono le orecchie e scendono sui lati */}
+          <path d="M70 220C62 132 100 92 160 92s98 40 90 128c-4-34-10-54-24-64-14 20-36 28-66 24-26-4-44-14-52-28-10 20-24 34-38 44z" fill="#2E2721" />
+          <path d="M74 200c-12 34-10 66 2 90-4-36-2-62 8-90z" fill="#2E2721" />
+          <path d="M246 200c12 34 10 66-2 90 4-36 2-62-8-90z" fill="#2E2721" />
         </g>
       )}
     </svg>
